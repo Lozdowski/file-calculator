@@ -36,7 +36,7 @@ class InstructionsProviderTest {
         InstructionsForCalculator instructionsForCalculator =
                 instructionsProvider.readInstructionsForCalculatorFrom(SRC_MAIN_RESOURCES_CALC_1_TXT);
         //then
-        assertEquals(instructionsForCalculator, provideInstructionsForCalculator());
+        assertEquals(provideInstructionsForCalculator(), instructionsForCalculator);
     }
 
     @Test

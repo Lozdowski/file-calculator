@@ -19,7 +19,7 @@ class MultiplyTest {
         //when
         int result = multiply.calculate(20, 3);
         //then
-        assertEquals(result, 60);
+        assertEquals(60, result);
     }
 
 }

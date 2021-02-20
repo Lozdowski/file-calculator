@@ -2,12 +2,13 @@ package calculator.domain;
 
 import data.dto.InstructionRow;
 import data.dto.InstructionsForCalculator;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MyCalculatorTest {
 
@@ -29,7 +30,7 @@ class MyCalculatorTest {
         //when
         int result = myCalculator.run(instructionsForCalculator);
         //then
-        Assertions.assertEquals(result, 47);
+        assertEquals(47, result);
     }
 
     private InstructionsForCalculator provideInstructionsForCalculator(){

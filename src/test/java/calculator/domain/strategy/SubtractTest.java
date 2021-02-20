@@ -19,7 +19,7 @@ class SubtractTest {
         //when
         int result = subtract.calculate(20, 15);
         //then
-        assertEquals(result, 5);
+        assertEquals(5, result);
     }
 
 }

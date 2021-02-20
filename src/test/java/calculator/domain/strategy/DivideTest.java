@@ -19,7 +19,7 @@ class DivideTest {
         //when
         int result = divide.calculate(20, 5);
         //then
-        assertEquals(result, 4);
+        assertEquals(4, result);
     }
 
     @Test

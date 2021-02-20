@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 public class MyCalculatorRunner {
 
-    private static final String ANOTHER_FILE_QUESTION = "Wanna calculate another file? press ENTER or NO to exit";
-    private static final String NO = "NO";
+    private static final String ANOTHER_FILE_QUESTION = "Wanna calculate another file? press Y- to continue,  or N- to exit";
+    private static final String NO = "N";
 
     private final MyCalculator myCalculator;
     private final InstructionsProvider objectsProvider;
@@ -21,25 +21,27 @@ public class MyCalculatorRunner {
     }
 
     public void run() {
-        while (true) {
+        String str = "";
+        do  {
             try {
                 printFilePathRequest();
                 InstructionsForCalculator instructions = objectsProvider.readInstructionsForCalculatorFrom(scanner.nextLine());
                 System.out.println(myCalculator.run(instructions));
                 System.out.println(ANOTHER_FILE_QUESTION);
-                String nox = scanner.nextLine();
-                if (nox.equals(NO)) {
+                String st = scanner.nextLine();
+                if (st.equals(NO)) {
                     scanner.close();
                     System.exit(0);
                 }
             } catch (FileNotFoundException ex) {
-                System.out.println("File not found, type: NO- to EXIT PROGRAM, or ENTER to continue");
-                if (scanner.nextLine().equals("NO")) {
+                System.out.println("File not found, type: Y- to continue,  or N- to exit");
+                if (scanner.nextLine().equals(NO)) {
                     scanner.close();
                     System.exit(0);
                 }
             }
         }
+        while (!str.equals(NO));
     }
 
     private void printFilePathRequest() {
