@@ -17,8 +17,8 @@ java -jar target/file-calculator-X-fat-jar.jar
 ```
 # Features
 
-Application calculate calculate result based on provided in file instructions.
-User is asked to type filepath with filename of the file for calculation, then result are printed to the screen.
+Application calculates result based on provided in file instructions.
+User is asked to type filepath with filename of the file for calculation, then result is printed to the screen.
 
 Example file input
 ```bash
@@ -30,6 +30,6 @@ apply 10
 output of above file printed on the screen : 70
 ```
 Assumptions:
--instructions will ignore mathematical precedence
--last instruction should be "apply" (for example: "apply 3")
--all instructions are applied to the "apply" row
+*instructions will ignore mathematical precedence
+*last instruction should be "apply" (for example: "apply 3")
+*all instructions are applied to the "apply" row
