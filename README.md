@@ -30,6 +30,6 @@ apply 10
 output of above file printed on the screen : 70
 ```
 Assumptions:
-*instructions will ignore mathematical precedence
-*last instruction should be "apply" (for example: "apply 3")
-*all instructions are applied to the "apply" row
+* instructions will ignore mathematical precedence
+* last instruction should be "apply" (for example: "apply 3")
+* all instructions are applied to the "apply" row
